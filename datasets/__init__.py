@@ -8,7 +8,7 @@ def get_dataset_and_loaders(name, data_dir, batch_size, download=False):
 
     name = name.lower()
 
-    # 공용 Transform
+    
     train_transform = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.RandomHorizontalFlip(),
@@ -31,7 +31,6 @@ def get_dataset_and_loaders(name, data_dir, batch_size, download=False):
         num_classes = len(train_dataset.classes)
     elif name == "cifar10":
         train_dataset, test_dataset = get_cifar10(data_dir, download, train_transform, test_transform)
-        # CIFAR-10에는 별도 val 없음 → train의 10%를 val로 split
         val_size = int(0.1 * len(train_dataset))
         train_size = len(train_dataset) - val_size
         train_dataset, val_dataset = torch.utils.data.random_split(train_dataset, [train_size, val_size])
