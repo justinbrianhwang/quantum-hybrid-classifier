@@ -1,0 +1,11 @@
+torch>=2.0
+torchvision>=0.15
+pennylane>=0.33
+qiskit>=1.0
+numpy
+scikit-learn
+matplotlib
+seaborn
+tqdm
+Pillow
+
