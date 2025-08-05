@@ -3,7 +3,6 @@ import torch.nn as nn
 import torchvision.models as models
 
 class ClassicalResNet(nn.Module):
-    """순수 고전 ResNet-18"""
     def __init__(self, num_classes=2):
         super().__init__()
         self.resnet = models.resnet18(pretrained=True)
@@ -13,7 +12,6 @@ class ClassicalResNet(nn.Module):
         return torch.sigmoid(self.resnet(x)) if self.resnet.fc.out_features == 1 else self.resnet(x)
 
 class CompressedClassical(nn.Module):
-    """하이브리드와 유사한 파라미터 수의 고전 모델"""
     def __init__(self):
         super().__init__()
         base_model = models.resnet18(pretrained=True)
