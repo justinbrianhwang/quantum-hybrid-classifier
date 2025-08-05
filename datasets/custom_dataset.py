@@ -7,7 +7,6 @@ class CustomImageDataset(Dataset):
     data_dir/train/class_x/*.jpg
     data_dir/val/class_x/*.jpg
     data_dir/test/class_x/*.jpg
-    구조를 자동 인식
     """
     def __init__(self, root_dir, split='train', transform=None):
         self.root_dir = root_dir
