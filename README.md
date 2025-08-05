@@ -4,6 +4,9 @@ A PyTorch + PennyLane based **Quantum-Classical Hybrid Image Classifier**
 that supports both **classical deep learning models** and a **quantum-classical hybrid model**  
 for image classification tasks.
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/17cd38f9-4957-435f-b89e-a35709319d88" />
+
+
 This project is designed as a **general image classification framework**,  
 so you can either use built-in datasets (e.g., CIFAR-10) or **your own custom dataset**.
 
