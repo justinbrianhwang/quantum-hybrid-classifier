@@ -12,7 +12,7 @@ class ResNetFeatureExtractor(nn.Module):
             nn.ReLU(),
             nn.Dropout(0.3),
             nn.Linear(64, output_dim),
-            nn.Tanh()  # [-1, 1] 범위 (양자 인코딩용)
+            nn.Tanh()
         )
 
     def forward(self, x):
